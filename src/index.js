@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 
 const pizzaData = [
   {
@@ -48,7 +49,7 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Header />
       <Menu />
       <Footer />
@@ -57,8 +58,16 @@ function App() {
 }
 
 function Header() {
-  return <h1>Fast Pizza Co</h1>;
+  // const style = { color: 'red', fontSize: '48px', textTransform: 'upperCase' };
+  const style = {};
+
+  return (
+    <Header className="header">
+      <h1 style={style}>Fast Pizza Co</h1>
+    </Header>
+  );
 }
+
 function Menu() {
   return (
     <div>
